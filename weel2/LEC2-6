@@ -1,0 +1,82 @@
+# Sorting Algorithms
+
+## 1. Selection Sort
+
+**Description:**
+Selection Sort is an in-place comparison sorting algorithm. It divides the input list into two parts: a sorted and an unsorted region. It repeatedly selects the smallest (or largest, depending on the order) element from the unsorted region and moves it to the end of the sorted region.
+
+**Algorithm:**
+1. Start with the first element as the minimum.
+2. Compare it with the rest of the array to find the smallest element.
+3. Swap the smallest element found with the first element.
+4. Move the boundary of the sorted region one element to the right.
+5. Repeat until the entire array is sorted.
+
+**Time Complexity:**
+- Best: \( O(n^2) \)
+- Average: \( O(n^2) \)
+- Worst: \( O(n^2) \)
+
+---
+
+## 2. Insertion Sort
+
+**Description:**
+Insertion Sort builds a sorted array one element at a time. It takes each element from the input and finds its correct position in the already sorted part of the array.
+
+**Algorithm:**
+1. Start with the second element (the first is trivially sorted).
+2. Compare it to the elements in the sorted region.
+3. Shift all larger elements to the right.
+4. Insert the current element in its correct position.
+5. Repeat until the entire array is sorted.
+
+**Time Complexity:**
+- Best: \( O(n) \)
+- Average: \( O(n^2) \)
+- Worst: \( O(n^2) \)
+
+---
+
+## 3. Heap Sort
+
+**Description:**
+Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure. It first builds a max heap from the input array and then repeatedly extracts the maximum element from the heap, rebuilding the heap until it is empty.
+
+**Algorithm:**
+1. Build a max heap from the input array.
+2. Swap the root of the max heap (the largest element) with the last element.
+3. Reduce the size of the heap by one and heapify the root.
+4. Repeat until all elements are sorted.
+
+**Time Complexity:**
+- Best: \( O(n \log n) \)
+- Average: \( O(n \log n) \)
+- Worst: \( O(n \log n) \)
+
+---
+
+## 4. Merge Sort
+
+**Description:**
+Merge Sort is a divide-and-conquer algorithm. It divides the array into two halves, sorts each half, and then merges the sorted halves back together.
+
+**Algorithm:**
+1. If the array has one or zero elements, it is already sorted.
+2. Divide the array into two halves.
+3. Recursively sort each half.
+4. Merge the two sorted halves back together.
+
+**Time Complexity:**
+- Best: \( O(n \log n) \)
+- Average: \( O(n \log n) \)
+- Worst: \( O(n \log n) \)
+
+---
+
+## Summary
+
+- **Selection Sort:** Simple but inefficient for large datasets.
+- **Insertion Sort:** Efficient for small or nearly sorted datasets.
+- **Heap Sort:** Efficient and works in-place but has higher constants.
+- **Merge Sort:** Very efficient, especially for large datasets but requires additional space.
