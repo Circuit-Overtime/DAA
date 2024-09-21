@@ -1,0 +1,44 @@
+# Searching for a Value in an Array
+
+## Overview
+The search problem involves finding whether a value \( K \) is present in a collection of values \( A \). The values can be integers, which allows for ordering.
+
+## Types of Data Structures
+- **Arrays**: Fixed-size data structure allowing indexed access.
+- **Lists**: Dynamic data structure allowing sequential access.
+
+## Search Strategies
+
+### 1. Linear Search
+- **Unsorted Array/List**: Must check each element sequentially.
+- **Algorithm**:
+  1. Start from the first element.
+  2. Compare each element with \( K \).
+  3. If found, return the index; if not, return -1.
+- **Time Complexity**: 
+  - Worst Case: \( O(n) \) (when \( K \) is not present).
+
+### 2. Binary Search
+- **Sorted Array**: Utilizes the ordering of elements.
+- **Algorithm**:
+  1. Calculate the midpoint of the array.
+  2. If the midpoint equals \( K \), return true.
+  3. If \( K \) is smaller, search the left half; if larger, search the right half.
+  4. Repeat until the search interval is empty.
+- **Time Complexity**: 
+  - Average and Worst Case: \( O(\log n) \).
+
+## Recursive Binary Search Implementation
+- **Base Case**: When the search interval is empty.
+- **Recursive Case**: Calculate midpoint and decide which half to search.
+
+## Recurrence Relation
+- \( T(n) = 1 + T(n/2) \)
+- Base Case: \( T(0) = 1 \)
+- The complexity of binary search resolves to \( O(\log n) \).
+
+## Limitations
+- Binary search is efficient only for arrays because it allows for constant-time access to the midpoint. For lists, finding the midpoint may take linear time, making the search \( O(n) \).
+
+## Conclusion
+Binary search significantly reduces the number of comparisons needed to determine the presence of an element in a sorted array compared to linear search in an unsorted array. It exemplifies the efficiency gained by leveraging data structure properties.
